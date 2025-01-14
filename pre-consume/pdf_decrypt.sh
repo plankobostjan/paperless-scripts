@@ -61,7 +61,7 @@ fi
 #
 # Try to decrypt the PDF
 #
-if qpdf --decrypt --password="16071999" "$DOCUMENT_SOURCE_PATH" "$TEMP_FILE" >/dev/null 2>&1; then
+if qpdf --decrypt --password="PASSWORD" "$DOCUMENT_SOURCE_PATH" "$TEMP_FILE" >/dev/null 2>&1; then
   echo "File decrypted: $DOCUMENT_SOURCE_PATH"
   touch "$TEMP_FILE" --reference="$DOCUMENT_SOURCE_PATH"
   mv --verbose "$TEMP_FILE" "$DOCUMENT_WORKING_PATH"
